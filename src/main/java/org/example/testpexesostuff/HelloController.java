@@ -35,7 +35,6 @@ public class HelloController {
 
         for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 4; col++) {
-
                 Card card = cards.get(index++);
                 Button btn = card.getButton();
                 btn.setOnAction(e -> handleCardClick(card));
@@ -47,6 +46,6 @@ public class HelloController {
     private void handleCardClick(Card card) {
         card.flip();
         card.getIsCardEqual();
-        card.flipBack();
+        // card.flipBack(); - Uncomment this to switch back after logic happens
     }
 }
